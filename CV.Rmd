@@ -1,7 +1,7 @@
 ---
 name: Santiago Gerardo
 surname: Medina
-position: "bioinformatician"
+position: "bioinformatician (Stowers Institute for Medical Research)"
 address: "1000 E. 50th Street, Kansas City, MO 64110, USA"
 phone: +1 816 267 2239
 email: "smedina@stowers.org"
@@ -68,6 +68,17 @@ tribble(
   )
 ```
 
+# Skills
+
+```{r}
+tribble(
+   ~ scholarship, ~ year, ~other,
+   "Communication", "technical presentation, data analysis report, scientific publications, data visualization", "",
+   "Programing", "R/Bioconductor (advanced), R package development, shiny. Python (Scikit Learn, Pandas, NumPy, SciPy, Keras). Bash scripting, Pipeline development: Snakemake and lugi.", "",
+   "Statistics", "machine learning,  data analysis, generalized linear regression, cluster analysis, principal components analysis, cross validation, generalized linear models, Monte Carlo simulation, Bayesian statistics", NA
+ ) %>%
+   brief_entries(scholarship, other, year)
+```
 
 # Scholarships
 
@@ -91,6 +102,20 @@ tribble(
    brief_entries(nombre, from, year)
 ```
 
+In 2018 I did an intensive one-week [workshop](https://github.com/santiago1234/taller_de_bioinformatica_2018) with students at my university where I introduced them to scientific python, data analysis, and data visualization.
+
+
+# Meetings
+
+
+```{r}
+tribble(
+   ~ nombre, ~ from, ~ year,
+   "XVI National Congress of Plant Biochemistry and Molecular Biology & IX Symposium Mexico /USA,", "A pipeline for peak calling and motif discovery in ChIP-nexus data (poster)", "Querétaro-2016",
+   "Biological Data Science", "Deciphering mRNA decay programs during embryogenesis (poster)", "CSHL-2018"
+ ) %>%
+   brief_entries(nombre, from, year)
+```
 
 # Publications
 
@@ -102,11 +127,11 @@ tribble(
 
 **Languages**: Fully bilingual (Spanish / English)
 
+
 **outside the lab**, I enjoy reading, mainly non-fiction, and outdoor activities including mountain biking, hiking, and horseback riding.
 
 # References
 
-+ Dr. Julio
-+ Dr. Cei
-+ Dr. Bazzini
-
++ Dr. [Julio Vega Arreguin](https://scholar.google.com/citations?user=lQThETwAAAAJ&hl=en) jvega.arreguin@gmail.com
++ Dr. [Cei Abreu-Goodger](http://ceiabreulab.org/) cei.abreu@cinvestav.mx
++ Dr. [Ariel Bazzini](https://research.stowers.org/bazzinilab/index.html) arb@stowers.org
