@@ -1,20 +1,95 @@
-Santiago Gerardo Medina Muñoz
-============
+---
+name: Santiago Gerardo
+surname: Medina
+position: "bioinformatician"
+address: "1000 E. 50th Street, Kansas City, MO 64110, USA"
+phone: +1 816 267 2239
+email: "smedina@stowers.org"
+twitter: mariecurie
+github: mariecurie
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::latexcv:
+    theme: classic
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+# Personal Details
+
+```{r}
+tribble(
+   ~ question, ~ answer,
+   "Date of Birth", "June 17, 1995",
+   "Nationality", "Mexican",
+   "Place of Birth", "Guanajuato, Mexico",
+   "Marital Status", "Single",
+   "github", "santiago1234"
+ ) %>%
+   brief_entries(question, answer)
+```
+
+# Education
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Bachelor in Genomic Sciences", "2013-17", "Universidad Nacional Autónoma de México", "Léon, Mexico"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+**2018 - (current position):** *I work as a bioinformatician in [Ariel Bazzini's lab](https://research.stowers.org/bazzinilab/) at the Stowers Institute for Medical Research.*
+
+I collaborate with experimentalists by providing help in analyzing omics-data to study how genes are regulated and how that regulation can impact development or affect human diseases. Also, I have the opportunity to carry my own research projects developing statistical models to understand post-transcriptional gene regulation.
+
+# Research Experience
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc, ~Where,
+  2014, "Conservation of microRNAs targets in homologous  genes ", "Using microarrays and RNA-seq data I evaluated if the microRNA’s target sites of homologous genes were conserved and also the conservation of expression pattern due to microRNA effect.", "undergraduate summer research, National Laboratory of Genomics for Biodiversity, Mexico, under the supervision of Dr. Cei Abreu",
+  2016, "Analysis of NBS domains of plant resistance genes", "Worked with Dr. Carmen Gomez, I identified the NBS domains of plant resistance using bioinformatics approaches (blast and HMMER) of 30 plant genomes and I did phylogenomics analysis of this domains to understand the evolution of these genes.","unam, leon",
+  1911, "Chemistry", "Awarded for the discovery of radium and polonium", "langebio"
+) %>% 
+  detailed_entries(
+    Year, 
+    Type,
+    Desc,
+    Where
+  )
+```
+
+# Scholarships
+
+```{r}
+tribble(
+   ~ scholarship, ~ from, ~ year,
+   "Colgate Academic Excellence", "UNAM", "2016",
+   "Stowers summer scholar", "Kansas City", "2015"
+ ) %>%
+   brief_entries(scholarship, year, from)
+```
+
+# Workshops
+
+```{r}
+tribble(
+   ~ nombre, ~ from, ~ year,
+   "Bioinformatics Summer School", "Institute of Mathematics UNAM, Querétaro", "2016",
+   "Statistical Data Analysis for Genome Scale Biology", "Bressanone-Brixen", "2017"
+ ) %>%
+   brief_entries(nombre, from, year)
+```
 
 
--------------------------     --------------------------------------
-536 Pierce St, Kansas City, MO 64110
-santiagogmm@hotmail.com                                 santiago1234
-+1 (816) 2672230                                     @twitter_handle
--------------------------     --------------------------------------
+# Publications
 
-### Education
+* Wu, Qiushuang, **Santiago Gerardo Medina**, Gopal Kushawah, Michelle Lynn DeVore, Luciana A. Castellano, Jacqelyn M. Hand, Matthew Wright, and Ariel Alejandro Bazzini. "Translation affects mRNA stability in a codon-dependent manner in human cells." Elife 8 (2019): e45396.
 
-* **National Autonomous University of Mexico (UNAM)    Leon, MX**
-    + *Bachelor in Genomic Sciences. Grade 9.1/10      20142017*
-
-#### Courses and Meetings Attendance
-
-**2017** *CSAMA2017*, Statistical Data Analysis for Genome Scale Biology, Bressanone-Brixen - Italy
-
-**2016** *Bioinformatics Summer School*, Institute of Mathematics UNAM, Queretaro - Mexico
+* **Santiago Gerardo Medina**, Gopal Kushawah, Maria Jose Blanco, and Ariel Alejandro Bazzini. "Codon content predicts mRNA stability in vertebrates." *in production and to be published in bioRxiv on March 2020*
