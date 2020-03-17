@@ -4,7 +4,7 @@ surname: Medina
 position: "bioinformatician (Stowers Institute for Medical Research)"
 address: "1000 E. 50th Street, Kansas City, MO 64110, USA"
 phone: +1 816 267 2239
-email: "smedina@stowers.org"
+email: "santiagogmm123@gmail.com"
 profilepic: "./photo.jpg"
 twitter: mariecurie
 github: mariecurie
@@ -25,7 +25,7 @@ library(tibble)
 ```{r}
 tribble(
    ~ question, ~ answer,
-   "Date of Birth", "June 17, 1995",
+   "Date of Birth", "June 17, 1995 (gender: male)",
    "Place of Birth", "Guanajuato, Mexico (Mexican nationality)",
    "Marital Status", "Single"
  ) %>%
@@ -38,27 +38,26 @@ tribble(
 library(tibble)
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Bachelor in Genomic Sciences", "2013-17", "Universidad Nacional Autónoma de México", "Léon, Mexico"
+  "Bachelor in Agro-genomic Sciences", "2013-17", "Escuela Nacional de Estudios Superiores Unidad León, UNAM", ""
 ) %>% 
   detailed_entries(Degree, Year, Institution, Where)
 ```
 
-**2018 - (current):** *I work as a bioinformatician in [Ariel Bazzini's lab](https://research.stowers.org/bazzinilab/) at the Stowers Institute for Medical Research.*
-
-I collaborate with experimentalists by providing help in analyzing omics-data to study how genes are regulated and how that regulation can impact development or affect human diseases. Also, I have the opportunity to carry my own research projects developing statistical models to understand post-transcriptional gene regulation.
 
 # Research Experience
 
 ```{r}
 tribble(
   ~Year, ~Type, ~Desc, ~Where,
-  2014, "Conservation of microRNAs targets in homologous  genes ", "undergraduate summer research, National Laboratory of Genomics for Biodiversity, Mexico, supervised by Dr. Cei Abreu |", "Using microarrays and RNA-seq data I evaluated if the microRNA’s target sites of homologous genes were conserved and also the conservation of expression pattern due to microRNA effect.",
+  2018, "Codon Optimality", "Bioinformatician (current position), Stowers Institute, supervised by Dr. Ariel Bazzini. I have worked on multiple projects in the lab in collaboration with other lab members. Also, I have the opportunity to carry my own research projects developing statistical models to understand post-transcriptional gene regulation.", "" ,
+  2017, "Tissue-specific codon effect on gene expression", "undergraduate thesis, Stowers Institute, supervised by Dr. Ariel Bazzini. I employed Bayesian hierarchical models to estimate the effect of each codon on gene expression across human tissues. For this, I analyzed hundreds of RNA-seq profiles from ENCODE. My analysis showed that the effect of each codon on the mRNA level varies across tissues. This is still ongoing work and now, with a successful collaboration of a graduate student in the lab, we are experimentally validation these results in zebrafish.", "" ,
   
-  2015, "A pipeline for peak calling and motif discovery in ChIP-nexus data", "Stowers summer scholar, Stowers Institute, MO USA, supervised by Dr. Julia Zeitlinger |", "I benchmarked different tools for ChiP-seq data analysis with the purpose of developing a pipeline to analyze ChiP-nexus data.",
+  2016, "Evolution of NBS domains in plant resistance genes", "undergraduate research, UNAM-Leon, supervised by Dr. Julio Vega Arreguin. I identified NBS domains of immune resistance genes in the genomes of 30 plant species with BLAST searches. Then I looked at the evolution of these domains with phylogenetic approaches.", "",
   
-  2016, "Evolution of NBS domains in plant resistance genes", "undergraduate research, UNAM-Leon, supervised by Dr. Julio Vega Arreguin |", "I identified NBS domains of immune resistance genes in the genomes of 30 plant species with BLAST searches. Then I looked at the evolution of these domains with phylogenetic approaches.",
+  2015, "A pipeline for peak calling and motif discovery in ChIP-nexus data", "Stowers summer scholar, Stowers Institute, MO USA, supervised by Dr. Julia Zeitlinger. I benchmarked different tools for ChiP-seq data analysis with the purpose of developing a pipeline to analyze ChiP-nexus data.", "",
   
-  2017, "Tissue-specific codon effect on gene expression", "undergraduate thesis, Stowers Institute, supervised by Dr. Ariel Bazzini |", "I employed Bayesian hierarchical GLMs to estimate the effect of each codon on gene expression across human tissues. For this, I analyzed hundreds of RNA-seq profiles from ENCODE. My analysis showed that the effect of each codon on the mRNA level varies across tissues. This is still ongoing work and now, with a successful collaboration of a graduate student in the lab, we are experimentally validation these results in zebrafish." 
+  2014, "Conservation\nof microRNAs targets in homologous  genes ", "undergraduate summer research, National Laboratory of Genomics for Biodiversity, Mexico, supervised by Dr. Cei Abreu. Using microarrays and RNA-seq data I evaluated if the microRNA’s target sites of homologous genes were conserved and also the conservation of expression pattern due to microRNA effect.", ""
+
 ) %>% 
   detailed_entries(
     Year, 
@@ -68,17 +67,30 @@ tribble(
   )
 ```
 
-# Skills
+# Publications
+
+* Wu, Qiushuang, **Santiago Gerardo Medina**, Gopal Kushawah, Michelle Lynn DeVore, Luciana A. Castellano, Jacqelyn M. Hand, Matthew Wright, and Ariel Alejandro Bazzini. "Translation affects mRNA stability in a codon-dependent manner in human cells." Elife 8 (2019): e45396.
+
+* **Santiago Gerardo Medina**, Gopal Kushawah, Maria Jose Blanco, and Ariel Alejandro Bazzini. "Interplay between codon optimality and 3’ UTR cis-elements controls mRNA stability." *in review*
+
+# Meetings
+
+
+* **Deciphering mRNA decay programs during embryogenesis.** Santiago Gerardo Medina and Ariel A. Bazzini. (poster) *Biological Data Science. CSHL-2018*
+*  **A pipeline for peak calling and motif discovery in ChIP-nexus data.** Santiago Gerardo Medina and Julia Zeitlinger. (poster) *XVI National Congress of Plant Biochemistry and Molecular Biology & IX Symposium Mexico /USA. Querétaro-2016*
+
+# Workshops
 
 ```{r}
 tribble(
-   ~ scholarship, ~ year, ~other,
-   "Communication", "technical presentation, data analysis report, scientific publications, data visualization", "",
-   "Programing", "R/Bioconductor (advanced), R package development, shiny. Python (Scikit Learn, Pandas, NumPy, SciPy, Keras). Bash scripting, Pipeline development: Snakemake and lugi.", "",
-   "Statistics", "machine learning,  data analysis, generalized linear regression, cluster analysis, principal components analysis, cross validation, generalized linear models, Monte Carlo simulation, Bayesian statistics", NA
+   ~ nombre, ~ from, ~ year,
+   "Statistical Data Analysis for Genome Scale Biology", "Bressanone-Brixen", "2017",
+   "Bioinformatics Summer School", "Institute of Mathematics UNAM, Querétaro", "2016"
  ) %>%
-   brief_entries(scholarship, other, year)
+   brief_entries(nombre, from, year)
 ```
+
+In 2018 I did an intensive one-week [workshop](https://github.com/santiago1234/taller_de_bioinformatica_2018) with students at my university where I introduced them to scientific Python, data analysis, and data visualization.
 
 # Scholarships
 
@@ -91,47 +103,28 @@ tribble(
    brief_entries(scholarship, year, from)
 ```
 
-# Workshops
+# Skills
 
 ```{r}
 tribble(
-   ~ nombre, ~ from, ~ year,
-   "Bioinformatics Summer School", "Institute of Mathematics UNAM, Querétaro", "2016",
-   "Statistical Data Analysis for Genome Scale Biology", "Bressanone-Brixen", "2017"
+   ~ scholarship, ~ year, ~other,
+   "Communication", "technical presentation, data analysis report, scientific publications, data visualization", "",
+   "Programing", "R/Bioconductor (advanced), R package development, shiny. Python (Scikit Learn, Pandas, NumPy, SciPy, Keras). Bash scripting, Pipeline development: Snakemake. Software development, git, and github", "",
+   "Statistics", "machine learning,  data analysis, generalized linear regression, cluster analysis, principal components analysis, cross validation, generalized linear models, Monte Carlo simulation, Bayesian statistics", NA
  ) %>%
-   brief_entries(nombre, from, year)
+   brief_entries(scholarship, other, year)
 ```
 
-In 2018 I did an intensive one-week [workshop](https://github.com/santiago1234/taller_de_bioinformatica_2018) with students at my university where I introduced them to scientific python, data analysis, and data visualization.
-
-
-# Meetings
-
-
-```{r}
-tribble(
-   ~ nombre, ~ from, ~ year,
-   "XVI National Congress of Plant Biochemistry and Molecular Biology & IX Symposium Mexico /USA,", "A pipeline for peak calling and motif discovery in ChIP-nexus data (poster)", "Querétaro-2016",
-   "Biological Data Science", "Deciphering mRNA decay programs during embryogenesis (poster)", "CSHL-2018"
- ) %>%
-   brief_entries(nombre, from, year)
-```
-
-# Publications
-
-* Wu, Qiushuang, **Santiago Gerardo Medina**, Gopal Kushawah, Michelle Lynn DeVore, Luciana A. Castellano, Jacqelyn M. Hand, Matthew Wright, and Ariel Alejandro Bazzini. "Translation affects mRNA stability in a codon-dependent manner in human cells." Elife 8 (2019): e45396.
-
-* **Santiago Gerardo Medina**, Gopal Kushawah, Maria Jose Blanco, and Ariel Alejandro Bazzini. "Codon content predicts mRNA stability in vertebrates." *in production and to be available in bioRxiv on March 2020*
 
 ***
 
-**Languages**: Fully bilingual (Spanish / English)
++ **Languages**: Fully bilingual (Spanish / English)
 
 
-**outside the lab**, I enjoy reading, mainly non-fiction, and outdoor activities including mountain biking, hiking, and horseback riding.
+ **outside the lab**, I enjoy reading and outdoor activities including mountain biking, hiking, and horseback riding.
 
 # References
 
-+ Dr. [Julio Vega Arreguin](https://scholar.google.com/citations?user=lQThETwAAAAJ&hl=en) jvega.arreguin@gmail.com
-+ Dr. [Cei Abreu-Goodger](http://ceiabreulab.org/) cei.abreu@cinvestav.mx
-+ Dr. [Ariel Bazzini](https://research.stowers.org/bazzinilab/index.html) arb@stowers.org
++ Dr. [Julio Vega Arreguin](https://scholar.google.com/citations?user=lQThETwAAAAJ&hl=en)                jvega.arreguin@gmail.com
++ Dr. [Cei Abreu-Goodger](http://ceiabreulab.org/)                 cei.abreu@cinvestav.mx
++ Dr. [Ariel Bazzini](https://research.stowers.org/bazzinilab/index.html)                 arb@stowers.org
